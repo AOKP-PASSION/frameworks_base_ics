@@ -2286,7 +2286,7 @@ void CursorInputMapper::sync(nsecs_t when) {
     // the device in your pocket.
     // TODO: Use the input device configuration to control this behavior more finely.
     uint32_t policyFlags = 0;
-    if ((buttonsPressed || moved || scrolled) && getDevice()->isExternal()) {
+    if (buttonsPressed || moved || scrolled) {
         policyFlags |= POLICY_FLAG_WAKE_DROPPED;
     }
 
